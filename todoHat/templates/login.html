@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <form action="/login" method="post">
+        {{form.hidden_tag()}}
+        <fieldset>
+            <legend>join us</legend>
+            <div class="mb-3" class="form-group">
+                {{form.username.label}}
+                {{form.username}}
+            </div>
+            <div class="mb-3" class="form-group">
+                {{form.password.label}}
+                {{form.password}}
+            </div>
+            <div class="mb-3" class="form-group">
+            {{form.submit}}
+            </div>
+        </fieldset>
+    </form>
+{% endblock %}
